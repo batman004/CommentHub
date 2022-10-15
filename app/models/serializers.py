@@ -2,23 +2,30 @@ from typing import List, Union
 from pydantic import BaseModel
 
 
-class VersionBase(BaseModel):
+# creating new version of a file
+class Version(BaseModel):
     version: int
     description: Union[str, None] = None
-
-
-class Version(VersionBase):
-    id: int
     file_id: int
+    location: str
 
     class Config:
         orm_mode = True
 
 
-class FileBase(BaseModel):
+# model used for creating file
+class FileCreate(BaseModel):
     location: str
 
 
-class File(FileBase):
-    id: int
+# model for querying a file
+class File(BaseModel):
+    location: str
     versions: List[Version] = []
+
+    class Config:
+        orm_mode = True
+
+
+class FileNameEdit(BaseModel):
+    location: str
