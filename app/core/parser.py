@@ -38,7 +38,7 @@ class Parser:
                         f"on line: {line_num} expected: {self._cls_tag_pattern.pattern} but got: {self._op_tag_pattern.pattern}",
                     )
 
-                if opening_tag:
+                if not tag_open and opening_tag:
                     tag_open = True
                     start_line = line_num
 
