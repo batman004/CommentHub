@@ -1,0 +1,13 @@
+{
+    "parser_settings" : {
+        "token": "COMMENT",
+        "opening_tag": {
+            "left": "<",
+            "right": ">"
+        },
+        "closing_tag": {
+            "left": "</",
+            "right": ">"
+        }
+    }
+}
