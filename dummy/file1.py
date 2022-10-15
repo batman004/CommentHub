@@ -9,7 +9,7 @@ def func1():
 # <COMMENT-v12>
 # def func2():
 #     print("func2")
-# </COMMENT-v1>
+# </COMMENT-v12>
 
 # <COMMENT>
 # def func2():

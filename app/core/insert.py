@@ -1,0 +1,3 @@
+class Remove:
+    @staticmethod
+    defi
