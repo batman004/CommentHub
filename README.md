@@ -118,7 +118,7 @@ Calling `--help` on each command provides specific and useful information about 
 | Command            | Description                                                  |
 | ------------------ | ------------------------------------------------------------
 | `retrieve-comments` | Retrieves previous versions of commented out blocks|
-| `remove-comments`   | Remove commented out code under comment-tag  `TODO_ID`.       |
+| `remove-comments`   | Remove commented out code under comment-tag       |
 
 ## Release History
 
@@ -138,6 +138,6 @@ Calling `--help` on each command provides specific and useful information about 
 
 ## About the Author
 
-Yuvraj Singh Pathania - [Twitter](https://twitter.com/yuvrajsp01):
+Yuvraj Singh Pathania - [Twitter](https://twitter.com/yuvrajsp01)
 
 Kabir Singh Shekhawat - [Twitter](https://twitter.com/BakedSnek)
