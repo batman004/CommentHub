@@ -117,6 +117,17 @@ Calling `--help` on each command provides specific and useful information about 
 - 0.0.1
   - A work in progress
 
+
+## Coming up
+
+- [ ] Add persistent database support ⚓
+- [ ] Add command to automatically integrate CommentHub with git
+- [x] custom comment-tag support 📝
+
+
+
+
+
 ## About the Author
 
 Yuvraj Singh Pathania - [Twitter](https://twitter.com/yuvrajsp01):
