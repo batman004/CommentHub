@@ -1,6 +1,9 @@
 from core.parser import Parser
 from core.remove import Remove
+from core.insert import Insert
+
 import pprint
+
 parser_settings = {
     "token": "COMMENT",
     "opening_tag": {"left": "<", "right": ">"},
@@ -15,3 +18,4 @@ comments = parser.parse(filename)
 pprint.pprint(comments)
 
 Remove.remove_comments(filename, comments)
+# Insert.insert_comments(filename, comments)
