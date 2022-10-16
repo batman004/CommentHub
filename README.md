@@ -60,6 +60,14 @@ sqlalchemy.url = sqlite:///db/CommentHubDb.db
 ```
 add the location for the sqllite database file as above (you can change this to any other file location as per requirment)
 
+
+
+Next run migrations to create the tables in your database
+```sh
+(venv) $ alembic upgrade heads
+```
+
+
 ## Usage
 
 Once you've downloaded the source code and run the installation steps, you can run the following command to access the application's usage description:
