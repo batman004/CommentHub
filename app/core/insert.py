@@ -13,40 +13,13 @@ class Insert:
     @staticmethod
     def insert_comments(filename, comments):
         try:
-            fh = open(filename, "r")
-            temp_fh = open(f"/tmp/commenthub_tmp.py", "w")
-            line_indices = Insert._lines_to_insert(comments)
+            fh = open(filename, "a")
+            fh.write("\n")
 
-            line_num, offset = 0, 0
-            while True:
-                line = fh.readline()
+            for comment in comments:
+                fh.write(comment["comment"])
+                fh.write("\n")
 
-                # file is over but comments were not inserted!
-                if not line and line_num - offset in line_indices:
-                    break
-
-                print(f"line_num: {line_num} | line_num - offset: {line_num - offset}")
-                if line_num - offset in line_indices:
-                    comment = line_indices[line_num - offset]
-                    temp_fh.write(comment.comment)
-
-                    num_of_lines = comment.end - comment.start + 1
-                    line_num += num_of_lines
-                    offset += num_of_lines
-                    print(f"offset increase by: {num_of_lines}")
-
-                temp_fh.write(line)
-                line_num += 1
-
-            temp_fh.close()
-            fh.close()
-
-            fh = open(filename, "w")
-            temp_fh = open(f"/tmp/commenthub_tmp.py", "r")
-            for line in temp_fh:
-                fh.write(line)
-
-            temp_fh.close()
             fh.close()
 
         except FileNotFoundError:
@@ -54,7 +27,6 @@ class Insert:
             sys.exit(1)
         finally:
             fh.close()
-            temp_fh.close()
 
     @staticmethod
     def _lines_to_insert(comments):
