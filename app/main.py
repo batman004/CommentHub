@@ -1,17 +1,11 @@
-from core.parser import Parser
-from core.remove import Remove
-import pprint
-parser_settings = {
-    "token": "COMMENT",
-    "opening_tag": {"left": "<", "right": ">"},
-    "closing_tag": {"left": "</", "right": ">"},
-}
+"""Commenthub entry point script."""
+from CommentHub import __cli_name__
+from CommentHub.handlers import app
 
-filename = "/home/kabir/Desktop/hackout_2022/CommentHub/dummy/file1.py"
 
-parser = Parser()
-parser.load_parser_settings(parser_settings)
-comments = parser.parse(filename)
-pprint.pprint(comments)
+def main():
+    app(prog_name=__cli_name__)
 
-Remove.remove_comments(filename, comments)
+
+if __name__ == "__main__":
+    main()
