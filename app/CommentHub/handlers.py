@@ -19,6 +19,12 @@ def remove_comments(file_location: str = typer.Argument(...)):
     Remove.remove_comments(file_location, comments)
 
 
+@app.command()
+def retrieve_comments(file_location: str = typer.Argument(...)):
+    """Retrieves previous versions of commented out blocks"""
+    pass
+
+
 def _version_callback(value: bool) -> None:
     if value:
         typer.echo(f"{__cli_name__} v{__version__}")
