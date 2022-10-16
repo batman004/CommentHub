@@ -59,8 +59,18 @@ class Parser:
 
                 if opening_tag and closing_tag:
                     end_line = line_num
+
+                    is_versioned = True if opening_tag.group(2) else False
+                    version = opening_tag.group(2) if is_versioned else None
+
                     comments.append(
-                        {"start": start_line, "end": end_line, "comment": comment}
+                        {
+                            "start": start_line,
+                            "end": end_line,
+                            "comment": comment,
+                            "is_versioned": is_versioned,
+                            "version": version,
+                        }
                     )
 
                     comment = ""
