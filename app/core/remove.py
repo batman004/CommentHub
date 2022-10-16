@@ -1,4 +1,3 @@
-import readline
 import sys
 
 
@@ -45,10 +44,14 @@ class Remove:
         except FileNotFoundError:
             print(f"file: {filename} not found")
             sys.exit(1)
+        finally:
+            fh.close()
+            temp_fh.close()
 
     @staticmethod
     def _lines_to_remove(comments):
         line_indices = {}
+
         for comment in comments:
             start = comment["start"]
             end = comment["end"]
