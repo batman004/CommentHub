@@ -1,5 +1,3 @@
-# CommentHub
-Blazingly fast CLI to manage commented-out code.
 
 ```
    ______                                     __  __  __      __
@@ -11,7 +9,10 @@ Blazingly fast CLI to manage commented-out code.
 
 ```
 
-## CommentHub CLI
+# CommentHub CLI
+
+## High Level Workflow of proposed features
+![](https://user-images.githubusercontent.com/58564635/199416341-3af9f568-c625-4bbb-ac72-ce9e87bceeb8.png)
 
 **CommentHub** is a `"blazingly" 🔥` fast Command Line Interface to manage commented-out blocks in files and provide version control. built with [Typer](https://typer.tiangolo.com/)
 
