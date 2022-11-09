@@ -38,7 +38,7 @@ $ source venv/bin/activate
 
 4. Initialize the application:
 
-navigate inside the folder of your application and run the following command
+run the following script to run database migrations and populate database with required tables
 ```sh
 (venv) $ sh build.sh
 ```
