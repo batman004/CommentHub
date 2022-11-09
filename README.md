@@ -38,34 +38,9 @@ $ source venv/bin/activate
 
 4. Initialize the application:
 
+navigate inside the folder of your application and run the following command
 ```sh
 (venv) $ sh build.sh
-```
-
-This command creates a `alembic.ini` file and adds it to the `app/` directory.
-
-```
-.
-.
-.
-.
-# output_encoding = utf-8
-
-sqlalchemy.url = sqlite:///db/CommentHubDb.db
-
-[post_write_hooks]
-# post_write_hooks defines scripts or Python functions
-.
-.
-.
-```
-add the location for the sqllite database file as above (you can change this to any other file location as per requirment)
-
-
-
-Next run migrations to create the tables in your database
-```sh
-(venv) $ alembic upgrade heads
 ```
 
 

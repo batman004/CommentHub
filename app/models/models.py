@@ -1,9 +1,8 @@
 from datetime import datetime
-from email.policy import default
 from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
 from sqlalchemy.orm import relationship
 
-from db.database import Base
+from app.db.database import Base
 
 
 class File(Base):

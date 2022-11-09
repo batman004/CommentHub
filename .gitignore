@@ -9,9 +9,6 @@ __pycache__/
 # VS Code
 .vscode
 
-# alembic
-alembic.ini
-
 #database sqlite
 app/db/CommentHubDb.db
 
